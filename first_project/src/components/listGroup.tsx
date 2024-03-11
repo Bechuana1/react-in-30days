@@ -1,6 +1,6 @@
 // import { Fragment } from "react";
 
-const items = [
+let items = [
     "New York",
     "San Francisco",
     "Tokyo",
@@ -9,11 +9,12 @@ const items = [
     "Paris",
     "Mombasa",
 ];
-
+items = [];
 function ListGroup() {
     return (
         <>
             <h1>List</h1>
+            {items.length === 0 ? <p>No items Found</p> : null}
             <ul className="list-group">
                 {items.map((item) => (
                     <li key={item} className="list-group-item">
